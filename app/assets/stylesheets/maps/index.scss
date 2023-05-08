@@ -1,0 +1,81 @@
+.hero {
+  background-color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  padding: 20px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* maps styles */
+#maps {
+  height: 100vh;
+  background-color: #fff;
+}
+
+
+
+/* Types styles */
+.types {
+  background-color: #f5f5f5;
+  padding: 100px 0;
+}
+
+.types h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.type-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.type-list li {
+  width: 30%;
+}
+
+.type-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.type-image img {
+  max-width: 100%;
+}
+
+.type-list h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.type-list p {
+  font-size: 10px;
+  line-height: 1;
+  margin-bottom: 5px;
+}

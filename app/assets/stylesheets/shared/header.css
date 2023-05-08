@@ -1,0 +1,31 @@
+header {
+  background-color: #010101;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+}
+
+.top-logo{
+max-width: 100%;
+}
+
+.nav-menu .lists-menu {
+  display: flex;
+  margin-right: 50px;
+}
+
+.nav-menu .list-menu {
+  margin-left: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: #f1c40f;
+}
