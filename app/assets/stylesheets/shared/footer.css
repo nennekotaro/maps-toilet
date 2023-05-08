@@ -1,0 +1,12 @@
+footer {
+  background-color: #010101;
+  padding: 20px 0;
+  height: 10vh;
+  width: 100vw;
+}
+
+.footer-title{
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}

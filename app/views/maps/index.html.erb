@@ -1,1 +1,60 @@
-<div>テスト</div>
+<%= render "shared/header" %>
+<div class="hero">
+	<h1>トイレにいっといれアプリ</h1>
+	<p>現在位置から近くにあるトイレをマップ上に表示するWebアプリです。</p>
+	<p>トイレを探すだけでなく、新しいトイレ情報を簡単に登録できます。もうトイレに困ることはありません。</p>
+	<a href="#" class="cta-btn">自慢のトイレを登録しよう！</a>
+</div>
+
+<div id="maps">
+</div>
+
+<div class="types">
+	<h2>トイレの詳細</h2>
+	<ul class="type-list">
+		<li>
+		  <div class="type-image">
+			  <img src="https://dummyimage.com/300x200/000/fff" alt="うんこの種類1">
+			</div>
+			<h3>うんこタイプ1</h3>
+			<p>うんこの説明文が入ります。うんこの説明文が入ります。うんこの説明文が入ります。うんこの説明文が入ります。</p>
+      </li>
+  </ul>
+</div>
+
+<%= render "shared/footer" %>
+
+<%# Googleマップの表示コード %>
+<script>
+  let map
+  let marker
+
+  function initMap() {
+    geocoder = new google.maps.Geocoder()
+
+    map = new google.maps.Map(document.getElementById('maps'), {
+      zoom: 15
+    })
+
+    // 現在地の取得を試みる
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        }
+
+        // 現在地にマーカーを表示する
+        marker = new google.maps.Marker({
+          position: pos,
+          map: map
+        })
+
+        // 地図の中心を現在地に設定する
+        map.setCenter(pos)
+      })
+    }
+  }
+    </script>
+    <!-- Maps JavaScript APIを読み込むスクリプトタグにAPIキーを指定する -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPWOtb9LsNlLyAHrc8QkNJqo35mTYTrro&callback=initMap" async defer></script>
