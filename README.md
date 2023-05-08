@@ -1,24 +1,56 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### アプリケーション名
+トイレにいっといれアプリ
 
-Things you may want to cover:
+### アプリケーション概要
+1.外出先でお手洗いに行きたくなった時に、
+  綺麗なトイレや好みに合わせたトイレを探してくれるアプリ
 
-* Ruby version
+### URL
 
-* System dependencies
+### テスト用アカウント
+Basic認証パスワード：2222
+Basic認証ID：admin
+メールアドレス： ggg@ggg
+パスワード ggg111
 
-* Configuration
+### 利用方法
 
-* Database creation
+## トイレを探す
+1.トップページにGoogleマップで現在位置の情報が表示される
+2.サーバーのデータベースに登録されているトイレの情報からトイレマーカーが表示され、自分の近い位置のトイレを探すことができる
+3.気になったトイレの詳細ボタンを押すと、女性トイレがあるのか、洋式 
+  のトイレがあるのかなど確認できる
 
-* Database initialization
+## トイレの情報を登録する
+1.トップページのヘッダーからユーザー新規登録を行う
+2.新規トイレ登録ボタンから、トイレの情報()を入力し投稿する
+3.入力されたトイレの情報はトップページのGoogleマップに表示される
 
-* How to run the test suite
+### アプリケーションを作成した背景
+前職の営業時代、外回りの最中にトイレで悩まされることが多かった。
+近年、コンビニで利用できるトイレも減ってしまい、公衆トイレは未だに和式のトイレであることも多くなかなか綺麗使いやすいトイレを見つけられなかった。
+友人等にヒアリングしてみると、旅行先や休日のショッピングでトイレで悩む人が多いと分かり、すぐに近くのトイレを探し出せるアプリがあればと考え、トイレマップアプリケーションを開発することにした。
 
-* Services (job queues, cache servers, search engines, etc.)
+### 洗い出した要件
 
-* Deployment instructions
+### 実装した機能についての画像やGIFおよびその説明
 
-* ...
+### 実装予定の機能
+
+### データベース設計
+
+### 画面遷移図
+
+### 開発環境
+・フロントエンド：HTML/CSS、JavaScript
+・バックエンド：Ruby、Ruby on Rails
+・インフラ：render
+・テスト：
+・テキストエディタ
+・タスク管理：gitHub
+
+### ローカルでの動作方法
+
+### 工夫したポイント
