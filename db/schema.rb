@@ -13,15 +13,10 @@
 ActiveRecord::Schema.define(version: 2023_05_08_111506) do
 
   create_table "maps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "postal_code", null: false
-    t.string "city", null: false
     t.string "addresses", null: false
-    t.string "building"
-    t.string "prefecture", null: false
     t.bigint "user_id", null: false
     t.float "latitude"
     t.float "longitude"
-    t.string "sum_address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_maps_on_user_id"
