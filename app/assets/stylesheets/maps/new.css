@@ -1,0 +1,63 @@
+/* フォーム全体 */
+.maps-register-contents {
+  background-color: #f7f7f7;
+  margin: 70px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+/* フォームタイトル */
+.maps-register-title {
+  font-size: 36px;
+  color: #ffa200;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 必須項目マーク */
+.indispensable::before {
+  content: "*";
+  color: red;
+}
+
+.indispensable {
+  color: red;
+}
+
+/* フォームラベル */
+.form-text {
+  font-size: 24px;
+  color: #ffa200;
+}
+
+/* フォーム入力欄 */
+.input-default {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 24px;
+  color: #1f1f1f;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* フォーム送信ボタン */
+.form-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 30px;
+  font-size: 24px;
+  color: white;
+  background-color: #ffa200;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-submit:hover {
+  opacity: 0.8;
+}
