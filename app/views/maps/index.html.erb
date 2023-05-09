@@ -3,7 +3,9 @@
 	<h1>トイレにいっといれアプリ</h1>
 	<p>現在位置から近くにあるトイレをマップ上に表示するWebアプリです。</p>
 	<p>トイレを探すだけでなく、新しいトイレ情報を簡単に登録できます。もうトイレに困ることはありません。</p>
-	<a href="#" class="cta-btn">自慢のトイレを登録しよう！</a>
+	<%= link_to(new_map_path, class: 'cta-btn') do %>
+    <span>自慢のトイレを登録しよう！</span>
+  <% end %>
 </div>
 
 <div id="maps">
@@ -57,4 +59,4 @@
   }
     </script>
     <!-- Maps JavaScript APIを読み込むスクリプトタグにAPIキーを指定する -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPWOtb9LsNlLyAHrc8QkNJqo35mTYTrro&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>
