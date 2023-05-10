@@ -7,13 +7,13 @@ class MapsController < ApplicationController
   end
 
   def new
-    @map = Map.new
-    @toilet = @map.build_toilet
+    @map_toilet = MapToilet.new
   end
 
   def create
-    @map = Map.new(map_params)
-    if @map.save
+    @map_toilet = MapToilet.new(map_toilet_params)
+    if @map_toilet.valid?
+      @map_toilet.save
       redirect_to root_path
     else
       render :new
@@ -21,7 +21,8 @@ class MapsController < ApplicationController
   end
 
   private
-  def map_params
-    params.require(:map).permit(:addresses, :latitude, :longitude).merge(user_id: current_user.id)
+  def map_toilet_params
+    params.require(:map_toilet).permit(:addresses, :latitude, :longitude, :title, :info, :accessible_id, :baby_chair_id, :change_table_id, :gender_id, :paper_id, :powder_room_id, :slippers_id, :toilet_style_id, :toilet_wipes_id, :warm_id, :washlet_id
+    ).merge(user_id: current_user.id)
   end
 end

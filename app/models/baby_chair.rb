@@ -1,4 +1,4 @@
-class baby_chair < ActiveHash::Base
+class BabyChair < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'ベビーチェアなし' },

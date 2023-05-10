@@ -1,4 +1,4 @@
-class toilet_style < ActiveHash::Base
+class ToiletStyle < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '和式トイレ' },

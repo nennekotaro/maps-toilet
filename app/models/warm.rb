@@ -1,4 +1,4 @@
-class warm < ActiveHash::Base
+class Warm < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '暖房便座がない' },

@@ -1,4 +1,4 @@
-class powder_room < ActiveHash::Base
+class PowderRoom < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'パウダールームがない' },

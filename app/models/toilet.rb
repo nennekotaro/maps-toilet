@@ -13,8 +13,4 @@ class Toilet < ApplicationRecord
   belongs_to :warm
   belongs_to :washlet
 
-  #空のタイトルを保存できないようにする
-  validates :title, :text, presence: true
-  #空の説明文を保存できないようにする
-  validates :info, :text, presence: true
 end

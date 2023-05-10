@@ -1,4 +1,4 @@
-class toilet_wipes < ActiveHash::Base
+class ToiletWipes < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '便座除菌クリーナーがない' },

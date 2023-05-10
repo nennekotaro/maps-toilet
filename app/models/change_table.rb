@@ -1,4 +1,4 @@
-class change_table < ActiveHash::Base
+class ChangeTable < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'おむつ交換台なし' },
