@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_08_111506) do
+ActiveRecord::Schema.define(version: 2023_05_10_013525) do
 
   create_table "maps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "addresses", null: false
@@ -20,6 +20,26 @@ ActiveRecord::Schema.define(version: 2023_05_08_111506) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_maps_on_user_id"
+  end
+
+  create_table "toilets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "info", null: false
+    t.integer "accessible_id"
+    t.integer "baby_chair_id"
+    t.integer "change_table_id"
+    t.integer "gender_id"
+    t.integer "paper_id"
+    t.integer "powder_room_id"
+    t.integer "slippers_id"
+    t.integer "toilet_style_id"
+    t.integer "toilet_wipes_id"
+    t.integer "warm_id"
+    t.integer "washlet_id"
+    t.bigint "map_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["map_id"], name: "index_toilets_on_map_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -36,4 +56,5 @@ ActiveRecord::Schema.define(version: 2023_05_08_111506) do
   end
 
   add_foreign_key "maps", "users"
+  add_foreign_key "toilets", "maps"
 end

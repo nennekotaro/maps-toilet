@@ -6,7 +6,7 @@
       <%# 住所を入力 %>
       <div class='toilet-address-form'>
         <h1 class='info-input-haedline'>
-        トイレの住所を入力
+        トイレの住所を入力してください
         </h1>
         <div class="form-group">
           <div class='form-text-wrap'>
@@ -15,6 +15,35 @@
           </div>
           <%= f.text_field :addresses, class:"input-default", id:"addresses", placeholder:"東京都千代田区永田町１丁目７−１"%>
         </div>
+      </div>
+      <div class='toilet-address-form'>
+        <h1 class='info-input-haedline'>
+        トイレの情報を入力してください
+        </h1>
+        <div class="form-group">
+          <div class='form-text-wrap'>
+            <label class="form-text">タイトル</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :title, class:"input-default", id:"toilet-name", placeholder:"トイレ名（必須 40文字まで)", maxlength:"40" %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">説明文</label>
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :info, class:"input-default", id:"toilet-info", placeholder:"トイレの説明文（必須 1,000文字まで）", rows:"7" ,maxlength:"1000" %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">男女別</label>
+            <span class="indispensable">任意</span>
+          </div>
+          <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"toilet-gender"}) %>
+        </div>
+
+
+
       </div>
     <div class='form-submit'>
       <%= f.submit "登録" ,class:"submit-btn", id:"submit-btn" %>

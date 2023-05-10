@@ -1,4 +1,6 @@
 class MapsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+
   def index
     @maps = Map.includes(:user)
     gon.maps = Map.all
@@ -6,6 +8,7 @@ class MapsController < ApplicationController
 
   def new
     @map = Map.new
+    @toilet = @map.build_toilet
   end
 
   def create

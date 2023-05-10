@@ -67,3 +67,4 @@ gem 'devise'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem "gon"
+gem 'active_hash'
