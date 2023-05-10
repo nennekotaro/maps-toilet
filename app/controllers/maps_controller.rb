@@ -1,6 +1,7 @@
 class MapsController < ApplicationController
   def index
-
+    @maps = Map.includes(:user)
+    gon.maps = Map.all
   end
 
   def new
