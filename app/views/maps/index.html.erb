@@ -21,20 +21,20 @@
 <%# Googleマップの表示コード %>
 <script>
   let map;
-  let marker;
+  let marker = []; // マーカーを複数表示させたいので、配列化
+  let infoWindow = []; // 吹き出しを複数表示させたいので、配列化
   const maps = gon.maps;
 
-  // // トイレマーカーの情報を格納するオブジェクトを初期化する
-  // let toiletMarkers = [];
 
   function initMap() {
+    // geocoderを初期化
     geocoder = new google.maps.Geocoder()
     
     map = new google.maps.Map(document.getElementById('maps'), {
       zoom: 15
     })
 
-    // 現在地の取得を試みる
+    // mapの初期位置を現在位置に設定
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
         const pos = {
@@ -55,7 +55,7 @@
         // トイレマーカーを表示する
         for (let i = 0; i < maps.length; i++) {
           // const toiletId = maps[i].id;
-          marker = new google.maps.Marker({
+          marker[i] = new google.maps.Marker({
           position: { lat: maps[i].latitude , lng: maps[i].longitude },
           map: map,
           icon: {
@@ -63,17 +63,20 @@
             scaledSize: new google.maps.Size(40, 40) // マーカーのサイズを指定する
           }
           })
+            // 変数iを変数idに代入
+            let id = maps[i]['id']
+           // infoWindowは吹き出し
+            infoWindow[i] = new google.maps.InfoWindow({
+            // contentで中身を指定
+            // 今回は文字にリンクを貼り付けた形で表示
+            content: `<a href='/maps/${id}'>${maps[i].toilet.title}</a>`
+            });
+            // markerがクリックされた時、
+            marker[i].addListener("click", function(){
+                // infoWindowを表示
+                infoWindow[i].open(map, marker[i]);
+            });
         }
-        // toiletMarkers.push(toiletId);
-
-        // // トイレマーカーがクリックされたときの処理
-        // google.maps.event.addListener(marker, 'click', (function(toiletId) {
-        // return function() {
-        //   console.log('クリックされました');
-        //   console.log(toiletId);
-        //   // form変数に格納する処理を記述する
-        // }
-        // })(toiletId));
 
         // 地図の中心を現在地に設定する
         map.setCenter(pos);

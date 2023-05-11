@@ -3,7 +3,7 @@ class MapsController < ApplicationController
 
   def index
     @maps = Map.includes(:user)
-    gon.maps = Map.all
+    gon.maps = @maps.as_json(include: :toilet)
   end
 
   def new
@@ -18,6 +18,10 @@ class MapsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @map = Map.find(params[:id])
   end
 
   private

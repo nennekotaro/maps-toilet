@@ -1,0 +1,76 @@
+<%# トイレの概要 %>
+<div class="toilet-show">
+  <div class="toilet-box">
+    <div class="toilet-header">
+      <h2 class="title">
+        <%= @map.toilet.title %>
+      </h2>
+
+      <div class="toilet-img-content">
+        <%= image_tag "googlemap.jpg" ,class:"googlemap-icon" %>
+      </div>
+    </div>
+
+    <div class="toilet-explain-box">
+      <span class="explain-box">説明文</span>
+      <br><%= @map.toilet.info %><br>
+    </div>    
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-toilet">登録者</th>
+          <td class="detail-value"><%= @map.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">住所</th>
+          <td class="detail-value"><%= @map.addresses %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">男女別</th>
+          <td class="detail-value"><%= @map.toilet.gender.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">洋式か和式か</th>
+          <td class="detail-value"><%= @map.toilet.toilet_style.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">トイレットペーパー</th>
+          <td class="detail-value"><%= @map.toilet.paper.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">暖かい便座</th>
+          <td class="detail-value"><%= @map.toilet.warm.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">ウォシュレット</th>
+          <td class="detail-value"><%= @map.toilet.washlet.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">便座除菌クリーナー</th>
+          <td class="detail-value"><%= @map.toilet.toilet_wipes.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">ベビーチェア</th>
+          <td class="detail-value"><%= @map.toilet.baby_chair.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">おむつ交換台</th>
+          <td class="detail-value"><%= @map.toilet.change_table.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">多機能トイレ</th>
+          <td class="detail-value"><%= @map.toilet.accessible.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">パウダールーム</th>
+          <td class="detail-value"><%= @map.toilet.powder_room.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-toilet">スリッパ</th>
+          <td class="detail-value"><%= @map.toilet.slippers.name %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <%# /トイレの概要 %>
