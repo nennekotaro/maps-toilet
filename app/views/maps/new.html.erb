@@ -103,7 +103,7 @@
             <label class="form-text">スリッパ</label>
             <span class="dispensable">任意</span>
           </div>
-          <%= f.collection_select(:slippers_id, PowderRoom.all, :id, :name, {}, {class:"select-box", id:"toilet_slippers"}) %>
+          <%= f.collection_select(:slippers_id, Slippers.all, :id, :name, {}, {class:"select-box", id:"toilet_slippers"}) %>
         </div>
       </div>
     <div class='form-submit'>
