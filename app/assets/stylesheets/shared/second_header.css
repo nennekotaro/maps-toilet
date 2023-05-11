@@ -1,0 +1,10 @@
+.second-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-logo {
+  width: 130px;
+  height: 130px;
+}

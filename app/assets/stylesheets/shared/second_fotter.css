@@ -1,0 +1,10 @@
+.second-fotter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-fotter-logo {
+  width: 130px;
+  height: 130px;
+}

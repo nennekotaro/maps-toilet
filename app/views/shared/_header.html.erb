@@ -3,7 +3,7 @@
       <% if user_signed_in? %>
           <div class="nav-menu">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list-menu" %>
-            <%= link_to "投稿する", "#", class: "list-menu" %>
+            <%= link_to current_user.nickname, "#", class: "list-menu" %>
           </div>
       <% else %>
           <div class="nav-menu">

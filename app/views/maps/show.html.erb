@@ -1,4 +1,5 @@
 <%# トイレの概要 %>
+<%= render "shared/header" %>
 <div class="toilet-show">
   <div class="toilet-box">
     <div class="toilet-header">
@@ -71,6 +72,10 @@
         </tr>
       </tbody>
     </table>
+    <div class="back-top">
+      <%= link_to "戻る", root_path ,class:"back-button"%>
+    </div>
   </div>
 </div>
+<%= render "shared/footer" %>
   <%# /トイレの概要 %>
