@@ -12,5 +12,4 @@ class Toilet < ApplicationRecord
   belongs_to :toilet_wipes
   belongs_to :warm
   belongs_to :washlet
-
 end

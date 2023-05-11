@@ -7,12 +7,12 @@
 
       <div class="field">
         <%= f.label :nickname %><br />
-        <%= f.text_field :nickname, autofocus: true, maxlength: "40" %>
+        <%= f.text_field :nickname, autofocus: true, class: "input-signup", maxlength: "40" %>
       </div>
 
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email %>
+        <%= f.email_field :email, class: "input-signup" %>
       </div>
 
       <div class="field">
@@ -20,16 +20,16 @@
         <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %>文字以上の半角英数字)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.password_field :password, class: "input-signup", autocomplete: "off" %>
       </div>
 
       <div class="field">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        <%= f.password_field :password_confirmation, class: "input-signup", autocomplete: "off" %>
       </div>
 
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "Sign up", class: "input-signup" %>
       </div>
     <% end %>
   </div>

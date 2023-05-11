@@ -6,5 +6,4 @@ class PowderRoom < ActiveHash::Base
   ]
   include ActiveHash::Associations
   has_many :toilets
-
-  end
+end

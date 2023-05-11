@@ -21,8 +21,9 @@ class MapsController < ApplicationController
   end
 
   private
+
   def map_toilet_params
-    params.require(:map_toilet).permit(:addresses, :latitude, :longitude, :title, :info, :accessible_id, :baby_chair_id, :change_table_id, :gender_id, :paper_id, :powder_room_id, :slippers_id, :toilet_style_id, :toilet_wipes_id, :warm_id, :washlet_id
-    ).merge(user_id: current_user.id)
+    params.require(:map_toilet).permit(:addresses, :latitude, :longitude, :title, :info, :accessible_id, :baby_chair_id,
+                                       :change_table_id, :gender_id, :paper_id, :powder_room_id, :slippers_id, :toilet_style_id, :toilet_wipes_id, :warm_id, :washlet_id).merge(user_id: current_user.id)
   end
 end
