@@ -1,47 +1,109 @@
 <div class="maps-register-contents">
   <div class="maps-register-main">
     <h2 class="maps-register-title">新しいトイレを登録しよう</h2>
-    <%= form_with(model: @map, local: true) do |f| %>
+    <%= form_with(model: @map_toilet, url: maps_path, local: true) do |f| %>
 
       <%# 住所を入力 %>
       <div class='toilet-address-form'>
-        <h1 class='info-input-haedline'>
-        トイレの住所を入力
-        </h1>
         <div class="form-group">
           <div class='form-text-wrap'>
-            <label class="form-text">郵便番号</label>
+            <label class="form-text">○○県○○市○○町○○丁目○-○</label>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :postal_code, class:"input-default", id:"postal-code", placeholder:"例）123-4567", maxlength:"8" %>
+          <%= f.text_field :addresses, class:"input-default", id:"addresses", placeholder:"東京都千代田区永田町１丁目７−１"%>
         </div>
+      </div>
+      <div class='toilet-address-form'>
         <div class="form-group">
           <div class='form-text-wrap'>
-            <label class="form-text">都道府県</label>
+            <label class="form-text">タイトル</label>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :prefecture, class:"input-default", id:"prefecture", placeholder:"東京都" %>
+          <%= f.text_area :title, class:"input-default", id:"toilet-name", placeholder:"トイレ名（必須 10文字まで)", maxlength:"10" %>
         </div>
         <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">市区町村</label>
+         <div class='form-text-wrap'>
+            <label class="form-text">説明文</label>
             <span class="indispensable">必須</span>
           </div>
-          <%= f.text_field :city, class:"input-default", id:"city", placeholder:"例）横浜市緑区"%>
+          <%= f.text_area :info, class:"input-default", id:"toilet-info", placeholder:"トイレの説明文（必須 300文字まで）", rows:"5" ,maxlength:"300" %>
         </div>
         <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">番地</label>
-            <span class="indispensable">必須</span>
+         <div class='form-text-wrap'>
+            <label class="form-text">男女別</label>
+            <span class="dispensable">任意</span>
           </div>
-          <%= f.text_field :addresses, class:"input-default", id:"addresses", placeholder:"例）青山1-1-1"%>
+          <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"toilet-gender"}) %>
         </div>
         <div class="form-group">
-          <div class='form-text-wrap'>
-            <label class="form-text">建物名</label>
-            <span class="form-any">任意</span>
+         <div class='form-text-wrap'>
+            <label class="form-text">洋式か和式か</label>
+            <span class="dispensable">任意</span>
           </div>
-          <%= f.text_field :building, class:"input-default", id:"building", placeholder:"例）柳ビル103"%>
+          <%= f.collection_select(:toilet_style_id, ToiletStyle.all, :id, :name, {}, {class:"select-box", id:"toilet-style"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">トイレットペーパー</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:paper_id, Paper.all, :id, :name, {}, {class:"select-box", id:"toilet-paper"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">暖かい便座</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:warm_id, Warm.all, :id, :name, {}, {class:"select-box", id:"toilet-warm"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">ウォシュレット</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:washlet_id, Washlet.all, :id, :name, {}, {class:"select-box", id:"toilet-washlet"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">便座除菌クリーナー</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:toilet_wipes_id, ToiletWipes.all, :id, :name, {}, {class:"select-box", id:"toilet_wipes"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">ベビーチェア</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:baby_chair_id, BabyChair.all, :id, :name, {}, {class:"select-box", id:"toilet_baby_chair"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">おむつ交換台</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:change_table_id, ChangeTable.all, :id, :name, {}, {class:"select-box", id:"toilet_change_table"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">多機能トイレ</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:accessible_id, Accessible.all, :id, :name, {}, {class:"select-box", id:"toilet_accessible"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">パウダールーム</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:powder_room_id, PowderRoom.all, :id, :name, {}, {class:"select-box", id:"toilet_powder_room"}) %>
+        </div>
+        <div class="form-group">
+         <div class='form-text-wrap'>
+            <label class="form-text">スリッパ</label>
+            <span class="dispensable">任意</span>
+          </div>
+          <%= f.collection_select(:slippers_id, PowderRoom.all, :id, :name, {}, {class:"select-box", id:"toilet_slippers"}) %>
         </div>
       </div>
     <div class='form-submit'>
