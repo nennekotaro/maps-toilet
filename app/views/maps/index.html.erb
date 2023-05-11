@@ -11,26 +11,21 @@
 <div id="maps">
 </div>
 
-<div class="types">
+<div class="toilet-show-title">
 	<h2>トイレの詳細</h2>
-	<ul class="type-list">
-		<li>
-		  <div class="type-image">
-			  <img src="https://dummyimage.com/300x200/000/fff" alt="うんこの種類1">
-			</div>
-			<h3>うんこタイプ1</h3>
-			<p>うんこの説明文が入ります。うんこの説明文が入ります。うんこの説明文が入ります。うんこの説明文が入ります。</p>
-      </li>
-  </ul>
+  <div id="toilet-show"></div>
 </div>
 
 <%= render "shared/footer" %>
 
 <%# Googleマップの表示コード %>
 <script>
-  let map
-  let marker
+  let map;
+  let marker;
   const maps = gon.maps;
+
+  // // トイレマーカーの情報を格納するオブジェクトを初期化する
+  // let toiletMarkers = [];
 
   function initMap() {
     geocoder = new google.maps.Geocoder()
@@ -59,6 +54,7 @@
 
         // トイレマーカーを表示する
         for (let i = 0; i < maps.length; i++) {
+          // const toiletId = maps[i].id;
           marker = new google.maps.Marker({
           position: { lat: maps[i].latitude , lng: maps[i].longitude },
           map: map,
@@ -68,9 +64,19 @@
           }
           })
         }
+        // toiletMarkers.push(toiletId);
+
+        // // トイレマーカーがクリックされたときの処理
+        // google.maps.event.addListener(marker, 'click', (function(toiletId) {
+        // return function() {
+        //   console.log('クリックされました');
+        //   console.log(toiletId);
+        //   // form変数に格納する処理を記述する
+        // }
+        // })(toiletId));
 
         // 地図の中心を現在地に設定する
-        map.setCenter(pos)
+        map.setCenter(pos);
       })
     }
   }
