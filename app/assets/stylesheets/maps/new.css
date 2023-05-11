@@ -84,6 +84,20 @@
   transition: all 0.3s ease;
 }
 
+.submit-btn{
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFF3D3;
+}
+
 .form-submit:hover {
   opacity: 0.8;
+}
+
+.submit-btn:hover {
+  background-color: #F4A261;
+  color: #FFFFFF;
 }
