@@ -52,6 +52,22 @@ https://docs.google.com/spreadsheets/d/1yCXOJZwOA0XiDjhwHnYCtvjv8ed2rR3Xor5gt8B2
 
 # 実装した機能についての画像やGIFおよびその説明
 
+1.トップページのヘッダーからユーザー新規登録を行う
+[![Image from Gyazo](https://i.gyazo.com/568face54fa91c5238b931b4fea6a6b1.gif)](https://gyazo.com/568face54fa91c5238b931b4fea6a6b1)
+
+
+2.「自慢のトイレを登録しよう」ボタンから、トイレ情報の必須項目(住所、タイトル、説明文)と任意項目(洋式和式、ウォシュレット、暖房便座、幼児設備、男女共用別、多機能トイレ、パウダールーム、 除菌クリーナー、トイレットペーパー、スリッパ)を入力し、投稿する
+
+入力された住所をもとに、緯度経度を算出。トップページのGoogleマップにその住所にトイレマーカーが表示される
+[![Image from Gyazo](https://i.gyazo.com/a92bbca61e2e5c232db2a26000d9f48e.gif)](https://gyazo.com/a92bbca61e2e5c232db2a26000d9f48e)
+
+
+1.トップページのGoogleマップには、現在位置とその位置にマーカーが表示される。
+Googleマップには、登録されたトイレマーカーが表示され、近くのトイレはどこにあるのか確認できる
+  [![Image from Gyazo](https://i.gyazo.com/60b7944309612c4bb45acae47192f996.gif)](https://gyazo.com/60b7944309612c4bb45acae47192f996)
+
+
+
 # 実装予定の機能
 1.  トイレマーカーをクリックすると、トイレの情報を確認できる機能を開発中
 その後は、編集機能や削除機能、コメント機能を実装予定
