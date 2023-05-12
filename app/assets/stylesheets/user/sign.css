@@ -4,14 +4,22 @@
   margin: 0 auto;
   padding: 40px;
   width: 50%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.devise-login {
+  font-size: 25px;
+  color: #ffa200;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.devise-signin {
+  font-size: 25px;
+  color: #ffa200;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .field {
@@ -24,6 +32,11 @@ label {
   margin-bottom: 10px;
 }
 
+.form-text-sub{
+  font-size: 15px;
+  color: #ffa200;
+}
+
 .input-signup{
   font-size: 20px;
   padding: 10px;
@@ -34,13 +47,14 @@ label {
 }
 
 .input-sumbit {
+  margin-top: 20px;
   font-size: 20px;
   padding: 10px;
   width: 100%;
   border: none;
   border-radius: 5px;
   background-color: #E9C46A;
-  color: #000000;
+  color: #ffa200;
   cursor: pointer;
   font-weight: bold;
 }
