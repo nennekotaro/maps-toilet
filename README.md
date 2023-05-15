@@ -61,7 +61,7 @@ https://docs.google.com/spreadsheets/d/1yCXOJZwOA0XiDjhwHnYCtvjv8ed2rR3Xor5gt8B2
 1.トップページのヘッダーからユーザー新規登録を行う
 
 
-[![Image from Gyazo](https://i.gyazo.com/568face54fa91c5238b931b4fea6a6b1.gif)](https://gyazo.com/568face54fa91c5238b931b4fea6a6b1)
+[![Image from Gyazo](https://i.gyazo.com/ab5f89b01a28e6867541f9e9007d30f8.gif)](https://gyazo.com/ab5f89b01a28e6867541f9e9007d30f8)
 
 
 2.「自慢のトイレを登録しよう」ボタンから、トイレ情報の必須項目(住所、タイトル、説明文)と任意項目(洋式和式、ウォシュレット、暖房便座、幼児設備、男女共用別、多機能トイレ、パウダールーム、 除菌クリーナー、トイレットペーパー、スリッパ)を入力し、投稿する
@@ -69,7 +69,7 @@ https://docs.google.com/spreadsheets/d/1yCXOJZwOA0XiDjhwHnYCtvjv8ed2rR3Xor5gt8B2
 入力された住所をもとに、緯度経度を算出。トップページのGoogleマップにその住所にトイレマーカーが表示される
 
 
-[![Image from Gyazo](https://i.gyazo.com/a92bbca61e2e5c232db2a26000d9f48e.gif)](https://gyazo.com/a92bbca61e2e5c232db2a26000d9f48e)
+[![Image from Gyazo](https://i.gyazo.com/86d89c777c2d46d62181346f3c398c89.gif)](https://gyazo.com/86d89c777c2d46d62181346f3c398c89)
 
 
 
