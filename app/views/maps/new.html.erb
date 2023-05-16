@@ -4,6 +4,9 @@
     <h2 class="maps-register-title">新しいトイレを登録しよう</h2>
     <%= form_with(model: @map_toilet, url: maps_path, local: true) do |f| %>
 
+    <%# エラーメッセージを表示する %>
+    <%= render 'shared/error_messages', model: f.object %>
+
       <%# 住所を入力 %>
       <div class='toilet-address-form'>
         <div class="form-group">

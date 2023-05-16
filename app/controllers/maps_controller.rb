@@ -13,8 +13,14 @@ class MapsController < ApplicationController
   def create
     @map_toilet = MapToilet.new(map_toilet_params)
     if @map_toilet.valid?
-      @map_toilet.save
-      redirect_to root_path
+      if @map_toilet.latitude.present? && @map_toilet.longitude.present?
+        @map_toilet.save
+        redirect_to root_path
+      else
+        # 緯度と経度の値が空かだった場合、エラーメッセージを格納する
+        flash[:error] = "Latitude and longitude are required."
+        render :new
+      end
     else
       render :new
     end
