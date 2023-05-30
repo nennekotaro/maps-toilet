@@ -63,3 +63,9 @@ label {
   background-color: #F4A261;
   color: #FFFFFF;
 }
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+  font-size: 1.5vw;
+}

@@ -1,0 +1,15 @@
+<% if model.errors.any? %>
+  <div class="error-alert">
+    <ul>
+      <% model.errors.full_messages.each do |message| %>
+        <li class='error-message'><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% elsif flash[:error].present? %>
+  <div class="error-alert">
+    <ul>
+      <li class='error-message'><%= flash[:error] %></li>
+    </ul>
+  </div>
+<% end %>

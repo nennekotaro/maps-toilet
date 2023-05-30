@@ -10,6 +10,24 @@ class MapToilet
     validates :info
   end
 
+  FIELDS = [
+    :accessible_id,
+    :baby_chair_id,
+    :change_table_id,
+    :gender_id,
+    :paper_id,
+    :slippers_id,
+    :toilet_style_id,
+    :toilet_wipes_id,
+    :warm_id,
+    :washlet_id,
+    :powder_room_id
+  ]
+
+  FIELDS.each do |field|
+    validates field, numericality: { other_than: 1, message: "can't be blank" }
+  end
+
   def save
     map = Map.create(addresses: addresses, user_id: user_id, latitude: latitude, longitude: longitude)
     Toilet.create(title: title, info: info, accessible_id: accessible_id, baby_chair_id: baby_chair_id,
