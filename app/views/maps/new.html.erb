@@ -7,7 +7,7 @@
     <%# エラーメッセージを表示する %>
     <%= render 'shared/error_messages', model: f.object %>
 
-      <%# 住所を入力 %>
+      <%# トイレの情報を入力 %>
       <div class='toilet-address-form'>
         <div class="form-group">
           <div class='form-text-wrap'>
@@ -35,81 +35,82 @@
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">男女別</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"toilet-gender"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">洋式か和式か</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:toilet_style_id, ToiletStyle.all, :id, :name, {}, {class:"select-box", id:"toilet-style"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">トイレットペーパー</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:paper_id, Paper.all, :id, :name, {}, {class:"select-box", id:"toilet-paper"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">暖かい便座</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:warm_id, Warm.all, :id, :name, {}, {class:"select-box", id:"toilet-warm"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">ウォシュレット</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:washlet_id, Washlet.all, :id, :name, {}, {class:"select-box", id:"toilet-washlet"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">便座除菌クリーナー</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:toilet_wipes_id, ToiletWipes.all, :id, :name, {}, {class:"select-box", id:"toilet_wipes"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">ベビーチェア</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:baby_chair_id, BabyChair.all, :id, :name, {}, {class:"select-box", id:"toilet_baby_chair"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">おむつ交換台</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:change_table_id, ChangeTable.all, :id, :name, {}, {class:"select-box", id:"toilet_change_table"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">多機能トイレ</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:accessible_id, Accessible.all, :id, :name, {}, {class:"select-box", id:"toilet_accessible"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">パウダールーム</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:powder_room_id, PowderRoom.all, :id, :name, {}, {class:"select-box", id:"toilet_powder_room"}) %>
         </div>
         <div class="form-group">
          <div class='form-text-wrap'>
             <label class="form-text">スリッパ</label>
-            <span class="dispensable">任意</span>
+            <span class="indispensable">必須</span>
           </div>
           <%= f.collection_select(:slippers_id, Slippers.all, :id, :name, {}, {class:"select-box", id:"toilet_slippers"}) %>
         </div>
       </div>
+      <%# トイレの情報を入力 %>
     <div class='form-submit'>
       <%= f.submit "登録" ,class:"submit-btn", id:"submit-btn" %>
     </div>

@@ -21,6 +21,7 @@ class MapToilet
     :toilet_wipes_id,
     :warm_id,
     :washlet_id,
+    :powder_room_id
   ]
   
   FIELDS.each do |field|
