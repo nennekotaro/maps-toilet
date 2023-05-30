@@ -11,7 +11,7 @@ class MapsController < ApplicationController
   end
 
   def create
-  @map_toilet = MapToilet.new(map_toilet_params)
+    @map_toilet = MapToilet.new(map_toilet_params)
     if @map_toilet.valid?
       @map_toilet.save
       redirect_to root_path

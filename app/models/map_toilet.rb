@@ -9,7 +9,7 @@ class MapToilet
     validates :title
     validates :info
   end
-  
+
   FIELDS = [
     :accessible_id,
     :baby_chair_id,
@@ -23,7 +23,7 @@ class MapToilet
     :washlet_id,
     :powder_room_id
   ]
-  
+
   FIELDS.each do |field|
     validates field, numericality: { other_than: 1, message: "can't be blank" }
   end
